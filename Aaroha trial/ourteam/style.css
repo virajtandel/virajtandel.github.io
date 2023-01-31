@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100;200;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Passions+Conflict&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Averia Libre', cursive;
+    background-color: #490b3d;
+    /* background-color: #773141; */
+    /* background: url("./images/stock-vector-seamless-pattern-hand-drawn-doodle-donation-icons-set-vector-illustration-charity-symbols-582692482\(1\).jpg");
+    background-size: cover;
+     */
+}
+
+.team-section{
+    width: 100%;
+}
+.team-section .container{
+    width: 80%;
+    margin: auto;
+    
+}
+.team-section .container .row{
+    width: 60%;
+    margin: auto;
+}
+.team-section .container .row .title{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.team-section .container .row .title h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    /* background-color: #f1b814; */
+    /* background-color:#563d6796; */
+    background: #f1b81496;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.team-section .container .row .title h1:hover{
+    transform:translateY(-10px);
+}
+.team-section .container .row .title p{
+    font-size: 15px;
+    margin: 30px 0px;
+    color: whitesmoke;
+}
+.team-section .container .team-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 30px;
+    
+}
+.team-section .container .team-card .card{
+    width: 100%;
+    /* background-color: #fababa;#fababa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    padding-top: 10px;
+    cursor: pointer;
+    /* background-color: #490b3d; */
+    /* background: #f1b814; */
+    /* background: #99728d; */
+    background-color: #ff6a3d;
+    /* background: grey ; */
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.team-section .container .team-card .card:hover{
+    transform: scale(1.1);
+    transition: 0.9s;
+    /* background: #a43acb96; */
+
+}
+.team-section .container .team-card .card .image-section{
+    /* background-color: #490b3d; */
+    background: #f1b814;
+    background: grey ;
+}
+.team-section .container .team-card .card .image-section img{
+
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    /* background-color: #490b3d; */
+}
+.team-section .container .team-card .card .content{
+    width: 100%;
+    text-align: center;
+    /* background-color: #fff; */
+    border-radius: 10px;
+    /* background-color: #490b3d; */
+    background: grey ;
+}
+
+
+
+/* --------------trail color combination----------------- */
+.team-section .container .team-card .card{
+    background: #c09f80;
+}
+.team-section .container .team-card .card .content{
+    background: #c09f80;
+}
+.team-section .container .team-card .card .image-section{
+    background: #c09f80;
+}
+
+/* ---------------trial ends-------------- */
+
+
+
+
+
+
+.team-section .container .team-card .card .content h2{
+    font-size: 40px;
+    color: blue;
+    color: #fff;
+    color: #111;
+    font-weight: 200;
+    font-family:'Cookie', cursive;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    background: #c09f80;
+    /* background-color: #fff; */
+}
+.team-section .container .team-card .card .content h4{
+    margin-top: 5px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color: #fff;
+    color: #565656;
+    color: #773141;
+    font-size: larger;
+    text-decoration: underline;
+    /* background-color: #fff; */
+    background: #c09f80;
+}
+.team-section .container .team-card .card .content p{
+    background: #c09f80;
+    color: #fff;
+}
+
+.btn{
+    margin-top: 30px;
+    text-align: center; 
+    
+    
+    
+}
+.btn button{
+    font-size: 20px;
+    border-radius: 5px; 
+    text-decoration: none; 
+    
+    transition: 0.5s;
+    /* background: #f1b814;  */
+}
+.btn a:hover{
+    background: #f64c71; 
+    /* transform: scale(1.15); */
+}
+.btn a{
+    text-decoration: none;
+    font-size: 25px;
+    /* padding-left: 10px; */
+    padding: 5px;
+    color: #111;
+    border: 2px solid #111;
+    background:#fd481c96;
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+
+/* --------responsive-------- */
+@media screen and (max-width:900px){
+    .team-section .container .team-card{
+        
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .team-section .container .row .title p{
+        color: #fff;
+    }
+    
+}
+
+@media screen and (max-width:767px){
+    .team-section .container .team-card{
+        
+        grid-template-columns: 1fr;
+        
+    }
+    .team-section .container .row .title h1 {
+        font-size: 30px;
+    }
+    .title p{
+        display: none;
+    }
+    .insta button{
+        background: none;
+        left: 100px
+    }
+    
+    
+    
+}
+
+/* -------home button to main page------- */
+
+.homebtn {
+    /* background-color: #f9d1d7; */
+    border: none;
+    /* color: #111; */
+    color: whitesmoke;
+    background: none;
+    background-image: none;
+    
+    /* padding: 12px 16px; */
+    font-size: 45px;
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.5s;
+    z-index: 5;
+
+  }
+  .homebtn:hover {
+    /* background-color: grey; */
+    color: rgba(241, 71, 137, 0.904);
+    transform: scale(1.25);
+  }
+
+.insta{
+    /* background-color: #f9d1d7; */
+    border: none;
+    color:black;
+    color: whitesmoke;
+    /* padding: 12px 16px; */
+    cursor: pointer;
+    position: absolute;
+    right: 85%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 5;
+    /* padding: 10px; */
+    font-size: 40px;
+}
+.insta:hover {
+    /* background-color:white; */
+    color: rgba(241, 71, 137, 0.904);
+    transform: scale(1.25);
+  }
+
+@media screen and (max-width:750px) {
+    .homebtn {
+        font-size: 25px; 
+      }
+      .insta{
+        font-size: 25px;
+      }
+}
+@media screen and (max-width:340px){
+    .team-section .container .row .title h1{
+        font-size: 20px;
+    }
+}
+
+
+
+

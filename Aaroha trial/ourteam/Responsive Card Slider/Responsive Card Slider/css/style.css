@@ -1,0 +1,337 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* -----from our team trail------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100;200;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;500;600&display=swap');
+
+
+.team-section{
+  width: 100%;
+}
+.team-section .container{
+  width: 80%;
+  margin: auto;
+}
+.team-section .container .row{
+  width: 60%;
+  margin: auto;
+}
+.team-section .container .row .title{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.team-section .container .row .title h1{
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: blueviolet;
+}
+.team-section .container .row .title p{
+  font-size: 15px;
+  margin: 30px 0px;
+}
+.team-section .container .team-card{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.team-section .container .team-card .card{
+  width: 100%;
+  /* background-color: #fababa;#fababa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+}
+.team-section .container .team-card .card:hover{
+  background-color: #fababb96;
+  transition: 0.5s;
+
+}
+.team-section .container .team-card .card .image-section img{
+
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+.team-section .container .team-card .card .content{
+  width: 100%;
+  text-align: center;
+}
+
+
+.team-section .container .team-card .card .content h2{
+  font-size: 25px;
+  color: blue;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+}
+.team-section .container .team-card .card .content h4{
+  margin-top: 5px;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+/* --------responsive-------- */
+@media screen and (max-width:900px){
+  .team-section .container .team-card{
+      
+      grid-template-columns: repeat(2, 1fr);
+      
+  }
+  
+}
+
+@media screen and (max-width:767px){
+  .team-section .container .team-card{
+      
+      grid-template-columns: 1fr;
+      
+  }
+  .team-section .container .row .title h1 {
+      font-size: 30px;
+  }
+  .title p{
+      display: none;
+  }
+  
+}
+/* -----------from our team trial ends----------- */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  background-image: url(../images/finaltrial.jpg);
+  background-position: cover;
+}
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #bb8644;
+  /* background-color: #828081; */
+
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #bb8644;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* border: 4px solid #4070F4; */
+  border: 4px solid #490b3d
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  /* background-color: #4070F4; */
+  background-color: black;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #ea7186;
+}
+
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+  color: whitesmoke;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+
+
+
+
+/* ----------------insta and hme button starts------------------ */
+
+.homebtn {
+  /* background-color: #f9d1d7; */
+  border: none;
+  /* color: #111; */
+  color: whitesmoke;
+  background: none;
+  background-image: none;
+  margin-top: -10px;
+  /* padding: 12px 16px; */
+  font-size: 45px;
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.5s;
+  z-index: 5;
+
+}
+.homebtn:hover {
+  /* background-color: grey; */
+  color: rgba(241, 71, 137, 0.904);
+  transform: scale(1.15);
+}
+
+@media  screen and (max-width:450px) {
+  .homebtn{
+    /* margin-top: 2px; */
+    font-size: 30px;
+  }
+  .row .title h1{
+    font-size: 20px ;
+  }
+  
+}
+
+.row .title h1{
+  margin: auto;
+  text-align: center;
+  margin-top: 00px;
+  color: antiquewhite;
+  
+}
+
+
+
+
+
+
+
+/* ----unused code starts------- */
+.insta{
+  /* background-color: #f9d1d7; */
+  border: none;
+  color:black;
+  color: whitesmoke;
+  /* padding: 12px 16px; */
+  cursor: pointer;
+  position: absolute;
+  right: 85%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 5;
+  /* padding: 10px; */
+  font-size: 0px;
+}
+.insta:hover {
+  /* background-color:white; */
+  color: rgba(241, 71, 137, 0.904);
+  transform: scale(1.25);
+}
+/* ----unused code ends------- */
+
+

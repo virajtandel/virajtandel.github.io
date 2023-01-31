@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaroha Giving Wings</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    
+
+</head>
+<body>
+
+     <!-- ----------------popup starts------------------ -->
+    
+     <div class="popup">
+        <div class="contentBox">
+            <div class="close"></div>
+            <div class="imgBx">
+                <img src="/images/logo.png" alt="logo">
+            </div>
+            <!-- --------------form---------------- -->
+            <form name="submit-to-google-sheet">
+                <input type="text" name="name" placeholder="  Your Name*" required>
+                <input type="email" name="email" class="email" placeholder="  Your email">
+                <input type="tel" name="mobile" placeholder="  Your mobile number*" required>
+
+                <input type="submit" value="submit" class="btn">
+                
+                
+                <!-- <button type="submit" class="btn">join us</button> -->
+            </form>
+
+            <span id="msg"></span>
+            <!-- <span id="msg"></span> -->
+            <!-- ----------------form end------------------- -->
+
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwna70bMTWLPWckRg97-L7LAGg5OJMhyU6ffkitczo97d6uaBSzOfDJQDws33Qh6J13Qg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+        //   msg.innerHTML="Thank you!"
+          confirm("thank you! We'll connect soon.")
+          setTimeout(function(){
+              msg.innerHTML=""
+          },3000)
+          popup.style.display= "none";  //after the confirmation on pop up, pop up will dissapear
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
+    <!-- ------------------------automation after 2sec---------------------- -->
+
+    <script>
+        const popup = document.querySelector('.popup');
+        const close = document.querySelector('.close');
+
+        window.onload = function(){
+            setTimeout(function(){
+                popup.style.display= "block";
+            },2000)
+        }
+
+        close.addEventListener('click', ()=>{
+            popup.style.display= "none";
+        })
+
+
+        </script>
+        <!-- -------------------popup ends---------------------- -->
+
+
+    <div class="fullContainer banner" id="homeSection">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"> <img src="images/logo.png" alt="Aaroha logo"/></a>
+                </div>
+                <!--<h1>Aaroha Giving Wings</h1>-->
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#homeSection">Home</a>
+                        </li>
+                        <li>
+                            <a href="#aboutSection">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#programsSection">Events</a>
+                        </li>
+                        <li>
+                            <a href="#educationSection">Other activities</a>
+                        </li>
+                        <li>
+                            <a href="#gallerySection">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#joinSection">Join Us</a>
+                        </li>
+                    </ul>
+        
+                </nav>
+
+            </div>
+        </header>
+        
+        <!--Header ends here-->
+        <div class="container1">
+            
+            <!-- Slider main container -->
+            <div class="swiper">
+                
+                  
+                
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    
+     
+                        <div class="swiper-slide"><img src="./images/img1.jpg" alt="img1">
+                            <div class="slideText">
+                              <h1> Change is coming,
+                              <span> Be a part of it !</span></h1>
+                            
+                              <p>When people get hurt, they learn to hate… when people hurt others, 
+                                they become hated and racked with guilt. But knowing that pain allows people to be kind. 
+                                Pain allows people to grow… and how you grow is up to you.</p>
+                                <a href='https://www.instagram.com/aaroha_giving_wings/?next=%2F' target="_blank">
+                                    <button>
+                                        Start with a little
+                                    </button>
+                                </a>
+                            </div>           
+                        </div>
+                      
+
+                        <div class="swiper-slide"><img src="./images/img2.jpg" alt="img2">
+                            <div class="slideText">
+                                <h1> Change is coming,
+                               <span> Be a part of it !</span></h1>
+                            
+                                <p>When people get hurt, they learn to hate… when people hurt others, 
+                                they become hated and racked with guilt. But knowing that pain allows people to be kind. 
+                                Pain allows people to grow… and how you grow is up to you.</p>
+                                <a href='https://www.instagram.com/aaroha_giving_wings/?next=%2F' target="_blank">
+                                    <button>
+                                        Start with a little
+                                    </button>
+                                </a>
+                              </div>
+
+
+                            
+                        </div>
+
+                        <div class="swiper-slide"><img src="./images/img3.jpg" alt="img3">
+                            <div class="slideText"><!--using seperate class as getting error for using it for 3 times-->
+                                <h1> Change is coming,
+                               <span> Be a part of it !</span></h1>
+                            
+                                <p>When people get hurt, they learn to hate… when people hurt others, 
+                                they become hated and racked with guilt. But knowing that pain allows people to be kind. 
+                                Pain allows people to grow… and how you grow is up to you.</p>
+                                <a href='https://www.instagram.com/aaroha_giving_wings/?next=%2F' target="_blank">
+                                    <button>
+                                        Start with a little
+                                    </button>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide"><img src="./images/img4.jpg" alt="img4">
+                        </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+  
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>  
+           </div>
+           
+            
+        </div>
+    </div>
+<!--home section ends here-->
+
+
+<!--about us section starts here-->
+
+<section class="fullContainer" id="aboutSection">
+    <div class="container">
+        <h2 class="sectionTitle"> About Us</h2>
+        <p>
+            We strive to become better than we are today by challenging assumptions, 
+            demonstrating agility and being thoughtful. We are forever learners and relentless
+             in the pursuit of maintaining quality and evolving creative, innovative and effective solutions.
+        </p>
+          <div class="cards">
+            <div class="donationBox">
+
+                <div class="title">Give A Donation</div>
+            
+               <p> donation campaign slogan or anything else. make a difference.
+               </p>
+               <a href='https://www.frchg.in/3wYKeqs' target="_blank">
+                <button > Donate now</button>
+                </a>
+            </div>
+            <!--Donation box ends here-->
+            <div class="volunteerBox">
+
+                <div class="title">Become a volunteer</div>
+            
+               <p> Any message to encourage volunteers to join.
+               
+               </p>
+               <button>
+                Join us here!
+               </button>
+            </div>
+            <!--Volunteer box ends here-->
+            <div class="sponsorBox">
+
+                <div class="title">Become our sponsor</div>
+            
+               <p> connect with us for sponsonship thank you so much !
+               </p>
+               <button>
+                Become sponsor
+               </button>
+            </div>
+            <!--sponsor box ends here-->        
+         </div>      
+    </div>
+
+</section>
+
+<!--about us section ends here-->
+
+<!--programs section starts here-->
+
+<section class="programs" id="programsSection">
+
+    
+    <div class="container">
+        <h2 class="sectionTitle">
+            Programs
+        </h2>
+        <div class="boxContainer">
+
+            <div class="box">
+                <div class="cardImage">
+                    
+                </div>
+                
+                <div class="programTitle">A Giving Diwali</div>
+                    <div class="donationCount">
+                        Donation goal: <span>100000 Rs/-</span>
+                    </div>
+                    <a href='https://www.frchg.in/3wYKeqs' target="_blank">
+                        <button > Donate now</button>
+                        </a>  
+
+            </div>
+            <!--A giving diwali ends here-->
+
+            <div class="box">
+                <div class="cardImage">
+                    
+                </div>
+                <div class="programTitle">Secret Santa</div>
+                    <div class="donationCount">
+                        Donation goal: <span>50000 Rs/-</span>
+                    </div>
+                    <a href='https://www.frchg.in/3wYKeqs' target="_blank">
+                        <button > Donate now</button>
+                        </a>
+
+            </div>
+            <!--Secret santa ends here-->
+
+            <div class="box">
+                <div class="cardImage">
+                    
+                </div>
+                <div class="programTitle">Educational programs</div>
+                    <div class="donationCount">
+                        Donation goal: <span>50000 Rs/-</span>
+                    </div>
+                    <a href='https://www.frchg.in/3wYKeqs' target="_blank">
+                        <button > Donate now</button>
+                        </a>
+
+            </div>
+            <!--Educational programs ends here-->
+
+            <div class="box">
+                <div class="cardImage">
+                    
+                </div>
+                <div class="programTitle">other activities</div>
+                    <div class="donationCount">
+                        Donation goal: <span>20000 Rs/-</span>
+                    </div>
+                    <a href='https://www.frchg.in/3wYKeqs' target="_blank">
+                    <button > Donate now</button>
+                    </a>
+
+            </div>
+             <!--other activities ends here-->
+        </div>
+   <!--Box container ends here-->
+
+    </div>
+
+</section>
+
+<!--programs section ends here-->
+
+
+<!--education section starts here-->
+
+<section class="education" id="educationSection">
+
+    <video autoplay muted loop class="videoPlayer">
+        <source src="video/edu.mp4" type="video/mp4"/>
+        Your browser does not suport HTML5 video!
+    </video>
+    <div class="container">
+
+        <div class="sectionTitle">Education</div>
+        <div class="educationContainer">
+            <h3>
+            Education is essential for <br>
+            <strong>BETTER FUTURE</strong>
+            </h3>
+            <p>
+            When people get hurt, they learn to hate… when people hurt others, 
+            they become hated and racked with guilt. But knowing that pain allows people to be kind.
+            </p>
+            <a href='https://www.instagram.com/aaroha_giving_wings/?next=%2F' target="_blank">
+            <button>
+            EXPLORE NOW
+            </button>
+            </a>
+        </div>       
+
+    </div>
+    
+</section>
+<!--education section ends here-->
+
+<!--Gallery section starts here-->
+
+<section class="gallery" id="gallerySection">
+
+    <div class="container">
+        <div class="sectionTitle">
+            Gallery
+        </div>
+        <div class="galleryContainer">
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                <img src="images/gallery/image1.jpg" alt="">
+            </div>
+            <!--1st picture ends here-->
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                <img src="images/gallery/image3.jpg" alt="">
+            </div>
+            
+            <!--2 picture ends here  -->
+
+            
+
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                <img src="images/gallery/image3.jpg" alt="">
+            </div>
+            <!--3 picture ends here-->
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                
+                <img src="images/gallery/image1.jpg" alt="">
+                
+            </div>
+            
+            <!--4 picture ends here-->
+
+            
+
+
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                <img src="images/gallery/image1.jpg" alt="">
+            </div>
+            <!--5 picture ends here-->
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                <img src="images/gallery/image3.jpg" alt="">
+            </div>
+            <!--6 picture ends here-->
+
+           
+
+
+
+
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                <img src="images/gallery/image1.jpg" alt="">
+            </div>
+            <!--7 picture ends here-->
+            <div class="item">
+                <span class="title">
+                    Image Title
+                </span>
+                <img src="images/gallery/image3.jpg" alt="">
+            </div>
+            <!--8 picture ends here-->
+
+        </div>
+        
+    </div>
+    
+
+</section>
+
+<!--Gallery section ends here-->
+
+<!--join section starts here-->
+
+<section class="join" id="joinSection">
+    <div class="container">
+        <div class="joinTitle">   Let’s make the world a <span>BETTER PLACE!</span></div>
+        <p> “Making a donation is a way of reaching out a helping hand. 
+            By providing even a small donation, you can be part of an effort to 
+            provide medical assistance, supply food and shelter, 
+            and help families rebuild their lives and communities.”
+            </p>
+            <a href='https://www.instagram.com/aaroha_giving_wings/?next=%2F' target="_blank">
+            <button class="joinNow"> Join us</button>
+            </a>
+            <a href="./ourteam/ourTeam.html" target="_blank">
+
+            <button class="ourTeam"> Our team</button>
+            </a>
+
+            
+    </div>
+
+</section>
+
+<!--join section ends here-->
+
+<footer>
+    <div class="container">
+        <div class="newsLetterContainer">
+            <a href='https://www.instagram.com/aaroha_giving_wings/?next=%2F' target="_blank">
+            <img src="./images/footer.png" alt="Aaroha" /></a>
+            <p>Registered as a NGO at govt of India as<br>
+                "Aaroha Giving Wings Association"<br>
+                🅻🅴🆃'🆂 🆁🅸🆂🅴 🅱🆈 🅻🅸🅵🆃🅸🅽🅶 🅾🆃🅷🅴🆁🆂.
+                <br>
+             ᴀ ɢʀᴏᴜᴘ ᴏꜰ ʏᴏᴜɴɢꜱᴛᴇʀꜱ ᴛᴏɢᴇᴛʜᴇʀ ꜰᴏʀ ʙᴇᴛᴛᴇʀᴍᴇɴᴛ  
+             ᴀ ɢʀᴏᴜᴘ ᴏꜰ ʏᴏᴜɴɢꜱᴛᴇʀꜱ ᴛᴏɢᴇᴛʜᴇʀ ꜰᴏʀ ʙᴇᴛᴛᴇʀᴍᴇɴᴛ  
+             ᴀ ɢʀᴏᴜᴘ ᴏꜰ ʏᴏᴜɴɢꜱᴛᴇʀꜱ ᴛᴏɢᴇᴛʜᴇʀ ꜰᴏʀ ʙᴇᴛᴛᴇʀᴍᴇɴᴛ  
+             ᴀ ɢʀᴏᴜᴘ ᴏꜰ ʏᴏᴜɴɢꜱᴛᴇʀꜱ ᴛᴏɢᴇᴛʜᴇʀ ꜰᴏʀ ʙᴇᴛᴛᴇʀᴍᴇɴᴛ  
+             ᴀ ɢʀᴏᴜᴘ ᴏꜰ ʏᴏᴜɴɢꜱᴛᴇʀꜱ ᴛᴏɢᴇᴛʜᴇʀ ꜰᴏʀ ʙᴇᴛᴛᴇʀᴍᴇɴᴛ  
+
+            </p>
+            
+            <!-- <input type="email" name="Email" placeholder="Enter your email" />
+            <input type="text" name="Mobile number" placeholder="Enter your mobile number" required/>
+
+                <button type="submit">submit</button> -->
+
+                <!-- <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Your Name*" required>
+                    <input type="email" name="email" placeholder="Your email">
+                    <input type="tel" name="mobile" placeholder="Your mobile number*" required>
+                    
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span> -->
+
+        </div>
+        <!--newsLetterContainer ends here-->
+
+        <div class="linksContainer">
+            <div class="title">
+                Important Links
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#homeSection">Home</a>
+                </li>
+                <li>
+                    <a href="#aboutSection">About Us</a>
+                </li>
+                <li>
+                    <a href="#programsSection">Events</a>
+                </li>
+                <li>
+                    <a href="#educationSection">Other activities</a>
+                </li>
+                <li>
+                    <a href="#gallerySection">Gallery</a>
+                </li>
+                <li>
+                    <a href="#joinSection">Join Us</a>
+                </li>
+            </ul>
+
+        </div>
+        <!--linksContainer ends here-->
+
+        <div class="socialContainer">
+            <div class="title">Socials
+            </div>
+            <p>Instagram</p>
+            <p>Youtube</p>
+            <p>Facebook</p>
+            <p>Twitter</p>
+        </div>
+        <!--social Container ends here-->
+
+        <div class="connectContainer">
+            <div class="title">Connect with us
+            </div>
+            <p>
+                Mumbai, Maharashtra, India
+            </p>
+            <p>aarohagivingwings@gmail.com</p>
+            <p>(+91) 9876***210</p>
+        </div>
+        <!--connectContainer ends here-->
+
+    </div>
+</footer>
+
+   
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 2500,
+            displayOnInteraction: false,
+            
+        },
+  
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    
+  },
+
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+</script>
+
+<!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwna70bMTWLPWckRg97-L7LAGg5OJMhyU6ffkitczo97d6uaBSzOfDJQDws33Qh6J13Qg/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg=document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response =>{
+      msg.innerHTML="Thanks, will connect soon!"
+      setTimeout(function(){
+          msg.innerHTML=""
+      },5000)
+      form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+</script> -->
+
+</body>
+</html>
